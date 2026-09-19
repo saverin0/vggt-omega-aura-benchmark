@@ -167,6 +167,19 @@ and all 1,155 rows of the result files agreed exactly (largest difference in Abs
 an A100 (40 GB) with the same package versions; another GPU type or another PyTorch version may change the last digits,
 which was not tried. Dataset, toolkit, model code and weights are pinned by commit in `src/vggt_aura/pins.py`.
 
+## How this was made
+
+I designed this study: the question, the choice to test on data published after the model, a stratified failure
+analysis instead of one headline number, the two-language plan (a Python reference, then a C++ core tested against
+it), and the ground rules: verified facts only, predictions written down before results, every number with its
+source. I ran every experiment myself on Colab and made the calls that `docs/decisions.md` records: which blocks to
+run, when a number could not be trusted, what to cut, when to stop.
+
+Throughout, I worked with Claude (Anthropic) as a coding assistant. It helped with the implementation, the tests and
+these documents, working from my instructions and from the notebook outputs I produced; it never had access to the
+runtime, the dataset or a GPU. Before the first results existed we each wrote down what we expected:
+`docs/predictions.md` keeps both lists, and the decisions log says who was right about what.
+
 ## Licences, attribution and restrictions
 
 - **Model.** VGGT-Ω is under the FAIR Noncommercial Research License. All outputs and results in this repo are
