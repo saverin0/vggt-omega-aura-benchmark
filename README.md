@@ -11,6 +11,11 @@ by **weather, light and road type**, and to look at single scenes when a number 
 This is a stratified failure analysis of ONE checkpoint, with the predecessor VGGT-1B as a reference. It is
 **not** a test of the paper's scaling claims. Noncommercial research only (see Licences).
 
+This is independent work. It is not affiliated with, or endorsed by, the authors of VGGT-Ω or of FZI-AURA, and it is
+not an official benchmark of either. It exists because both teams released their work openly: the model with its
+weights, and a dataset rich enough (LiDAR, 3D boxes, per-point labels, weather and road metadata) to ask where a model
+fails and not only how well it does on average.
+
 ## Results in short
 
 414 scenes of about 40 keyframes each were run (front camera, 1920x1200 reduced to 640x400). 20 of them, the
@@ -51,7 +56,9 @@ and darkness without rain is two scenes. In heavy rain the LiDAR measures the sp
 surface and returns rain drops at 1 to 3 m in the open sky; relative error divides by that small "true" depth.
 One such scene reaches AbsRel 1.64 while its median signed error per frame is near zero
 ([picture](results/figures/03_rain_spray_in_the_lidar_ground_truth_depth.jpg)). Wet numbers are inflated by an
-unknown amount; medians are given for that reason.
+unknown amount; medians are given for that reason. This is how a LiDAR behaves in rain, not a defect of the dataset:
+the sensor really does see the spray. It matters here only because a LiDAR return is used as the true depth of a
+camera pixel.
 
 **5. Camera pose is excellent in daylight and fails in two recognisable ways.** Test split: rotation 0.59°,
 translation direction 0.82°, AUC@30 98.0, trajectory error 1.2% of the path; no failed scene among 99.
