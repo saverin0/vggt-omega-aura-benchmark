@@ -1736,3 +1736,16 @@ line; its commit is in the line anyway.
 Owner's choice: MIT for this repository's own code (`LICENSE`). It covers the
 code only: outputs of VGGT-Omega stay under its noncommercial licence and
 pictures showing AURA imagery stay CC BY-SA 4.0, as the README says.
+
+## 2026-09-19 Final review of the pushed repository
+
+Read through the GitHub CLI (signed in as the owner), nothing changed by it:
+private, default branch `main`, one branch, no tags, releases, deploy keys,
+webhooks, workflows or action secrets. Three commits, all with the owner's
+GitHub noreply address as author and committer and linked to the account. MIT
+detected. The README renders with its table, picture, nine sections and no
+e-mail address. No value from `.env` and no token-like string anywhere in the
+pushed history. Largest file 2.9 MB. No history rewrite needed.
+Found and fixed: every notebook declares format 4.5, which asks for an `id` on
+each cell; 125 cells written by the generator scripts had none. Stable ids were
+added; nothing else in the notebooks changed.
