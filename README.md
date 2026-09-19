@@ -208,6 +208,9 @@ runtime, the dataset or a GPU. Before the first results existed we each wrote do
 
 ## Citation of what this work builds on
 
+The dataset's authors ask for both of the first two entries: the dataset itself, and CoCar NextGen, the research
+vehicle it was recorded with.
+
 ```bibtex
 @misc{polley_fzi_aura_2026,
   author    = {Polley, Rupert and Heinrich, Marc and Sch{\"o}rner, Philip and Uecker, Marc and Ochs, Sven and
@@ -217,6 +220,17 @@ runtime, the dataset or a GPU. Before the first results existed we each wrote do
   version   = {1.0.0},
   publisher = {FZI Forschungszentrum Informatik},
   url       = {https://huggingface.co/datasets/fzi-forschungszentrum-informatik/FZI-AURA}
+}
+
+@inproceedings{heinrich2024cocar,
+  title        = {{CoCar NextGen: A Multi-purpose Platform for Connected Autonomous Driving Research}},
+  author       = {Heinrich, Marc and Zipfl, Maximilian and Uecker, Marc and Ochs, Sven and Gontscharow, Martin and
+                  Fleck, Tobias and Doll, Jens and Sch{\"o}rner, Philip and Hubschneider, Christian and
+                  Zofka, Marc Ren{\'e} and Viehl, Alexander and Z{\"o}llner, J. Marius},
+  booktitle    = {2024 IEEE 27th International Conference on Intelligent Transportation Systems (ITSC)},
+  pages        = {482--489},
+  year         = {2024},
+  organization = {IEEE}
 }
 
 @misc{wang2026vggtomega,
