@@ -83,6 +83,10 @@ advantage shrinks to a tie (−0.007, interval includes zero) while the pose adv
 against 14 of 269). Caveat: the two models see different input sizes (640x400 and 518x322) and are scored on
 their own sets of LiDAR pixels.
 
+![typical scene, all 40 frames](results/figures/01_typical_test_scene_frames.gif)
+*A typical test scene (median error), all 40 frames. Top camera image and predicted depth, bottom LiDAR ground
+truth and signed relative error. The picture below shows four of its frames side by side.*
+
 ![typical scene](results/figures/01_typical_test_scene_depth.jpg)
 *A typical test scene (median error). Columns: camera image, predicted depth, LiDAR ground truth, signed
 relative error (red = predicted too far, blue = too near, black rings = moving objects).*
