@@ -1,0 +1,26 @@
+# secrets: tokens live here, never commit
+.env
+.env.*
+!.env.example
+# model weights: never commit
+*.pt
+*.pth
+*.safetensors
+# dataset and scratch
+data/
+scratch/
+*.tar
+*.tar.xz
+*.pcd
+# python
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+# c++ build
+cpp/build/
+*.so
+*.pyd
+# editor settings hold local absolute paths
+.vscode/
